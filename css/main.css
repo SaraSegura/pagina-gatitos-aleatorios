@@ -4,8 +4,12 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-body .container-images {
+body .randomMichis .container-images {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+body .randomMichis .container-images .buttonsaveFavourites {
+  position: absolute;
+  bottom: -3px;
 }/*# sourceMappingURL=main.css.map */

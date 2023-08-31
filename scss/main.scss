@@ -4,9 +4,15 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
 
-  .container-images {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+  .randomMichis {
+    .container-images {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      .buttonsaveFavourites {
+        position: absolute;
+        bottom: -3px;
+      }
+    }
   }
 }
