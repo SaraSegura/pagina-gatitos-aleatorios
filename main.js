@@ -2,7 +2,10 @@ const API_URL_RANDOM =
   "https://api.thecatapi.com/v1/images/search?limit=3&api_key=live_xKPuRURI7sdbuuiXBuxx5xSgLJ7o4oYRBRVALsfStuudueWUUBbw6QHDUDWvjSEn";
 
 const API_URL_FAVORITES =
-  "https://api.thecatapi.com/v1/favourites?&api_key=live_xKPuRURI7sdbuuiXBuxx5xSgLJ7o4oYRBRVALsfStuudueWUUBbw6QHDUDWvjSEn";
+  "https://api.thecatapi.com/v1/favourites?api_key=live_xKPuRURI7sdbuuiXBuxx5xSgLJ7o4oYRBRVALsfStuudueWUUBbw6QHDUDWvjSEn";
+
+const API_URL_FAVORITES_DELETE = (id) =>
+  `https://api.thecatapi.com/v1/favourites/${id}?api_key=live_xKPuRURI7sdbuuiXBuxx5xSgLJ7o4oYRBRVALsfStuudueWUUBbw6QHDUDWvjSEn`;
 
 const spanError = document.getElementById("error");
 
@@ -60,8 +63,10 @@ async function loadFavouriteMichis() {
   if (res.status !== 200) {
     spanError.innerHTML = "Hubo un error: " + res.status + data.message;
   } else {
+    const section = document.getElementById("favoriteMichis");
+    section.innerHTML = "";
+
     data.forEach((michi) => {
-      const section = document.getElementById("favoriteMichis");
       const article = document.createElement("article");
       const imgContainer = document.createElement("div");
       const img = document.createElement("img");
@@ -121,6 +126,7 @@ async function loadFavouriteMichis() {
 
       btn.appendChild(svg);
       btn.appendChild(btnText);
+      btn.onclick = () => deleteFavouriteMichi(michi.id);
 
       imgContainer.appendChild(img);
       imgContainer.appendChild(btn);
@@ -149,6 +155,23 @@ async function saveFavouriteMichi(id) {
 
   if (res.status !== 200) {
     spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+  } else {
+    console.log("Michi guardado en favoritos");
+    loadRandomMichis();
+  }
+}
+
+async function deleteFavouriteMichi(id) {
+  const res = await fetch(API_URL_FAVORITES_DELETE(id), {
+    method: "DELETE",
+  });
+  const data = await res.json();
+
+  if (res.status !== 200) {
+    spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+  } else {
+    console.log("Michi eliminado de favoritos");
+    loadFavouriteMichis();
   }
 }
 
