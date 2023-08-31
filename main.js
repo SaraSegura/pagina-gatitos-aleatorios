@@ -157,7 +157,7 @@ async function saveFavouriteMichi(id) {
     spanError.innerHTML = "Hubo un error: " + res.status + data.message;
   } else {
     console.log("Michi guardado en favoritos");
-    loadRandomMichis();
+    loadFavouriteMichis();
   }
 }
 
