@@ -91,7 +91,7 @@ async function loadFavouriteMichis() {
         "h-36",
         "object-cover",
         "rounded-full",
-        "mr-10",
+        "mr-5",
         "mb-10",
         "border-8",
         "border-white"
