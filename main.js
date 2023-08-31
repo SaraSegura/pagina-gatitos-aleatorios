@@ -37,15 +37,23 @@ async function loadFavouriteMichis() {
 }
 
 async function saveFavouriteMichis() {
-  const rest = await fetch(API_URL_FAVORITES, {
+  const res = await fetch(API_URL_FAVORITES, {
     method: "POST",
-    header: {
+    headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify({
+      image_id: "dje",
+    }),
   });
+  const data = await res.json();
 
-  console.log("save");
-  console.log(rest);
+  console.log("Save");
+  console.log(res);
+
+  if (res.status !== 200) {
+    spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+  }
 }
 
 loadRandomMichis();
