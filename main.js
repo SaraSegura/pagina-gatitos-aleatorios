@@ -1,11 +1,13 @@
+const API_KEY =
+  "live_xKPuRURI7sdbuuiXBuxx5xSgLJ7o4oYRBRVALsfStuudueWUUBbw6QHDUDWvjSEn";
+
 const API_URL_RANDOM =
   "https://api.thecatapi.com/v1/images/search?limit=3&api_key=live_xKPuRURI7sdbuuiXBuxx5xSgLJ7o4oYRBRVALsfStuudueWUUBbw6QHDUDWvjSEn";
 
-const API_URL_FAVORITES =
-  "https://api.thecatapi.com/v1/favourites?api_key=live_xKPuRURI7sdbuuiXBuxx5xSgLJ7o4oYRBRVALsfStuudueWUUBbw6QHDUDWvjSEn";
+const API_URL_FAVORITES = "https://api.thecatapi.com/v1/favourites";
 
 const API_URL_FAVORITES_DELETE = (id) =>
-  `https://api.thecatapi.com/v1/favourites/${id}?api_key=live_xKPuRURI7sdbuuiXBuxx5xSgLJ7o4oYRBRVALsfStuudueWUUBbw6QHDUDWvjSEn`;
+  `https://api.thecatapi.com/v1/favourites/${id}?`;
 
 const spanError = document.getElementById("error");
 
@@ -55,7 +57,13 @@ async function loadRandomMichis() {
 }
 
 async function loadFavouriteMichis() {
-  const res = await fetch(API_URL_FAVORITES);
+  const res = await fetch(API_URL_FAVORITES, {
+    method: "GET",
+    headers: {
+      "X-API-KEY": API_KEY,
+    },
+  });
+
   const data = await res.json();
   console.log("Favoritos");
   console.log(data);
@@ -143,6 +151,7 @@ async function saveFavouriteMichi(id) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "X-API-KEY": API_KEY,
     },
     body: JSON.stringify({
       image_id: id,
@@ -164,6 +173,9 @@ async function saveFavouriteMichi(id) {
 async function deleteFavouriteMichi(id) {
   const res = await fetch(API_URL_FAVORITES_DELETE(id), {
     method: "DELETE",
+    headers: {
+      "X-API-KEY": API_KEY,
+    },
   });
   const data = await res.json();
 
