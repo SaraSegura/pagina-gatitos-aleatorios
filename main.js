@@ -189,6 +189,26 @@ async function deleteFavouriteMichi(id) {
   }
 }
 
+const fileInput = document.getElementById("file");
+const previewImage = document.getElementById("previewImage");
+
+fileInput.addEventListener("change", () => {
+  const file = fileInput.files[0];
+  if (file) {
+    // Mostrar la miniatura de la foto
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      previewImage.src = e.target.result;
+      previewImage.classList.remove("hidden");
+    };
+    reader.readAsDataURL(file);
+  } else {
+    // Ocultar la miniatura si no hay archivo seleccionado
+    previewImage.src = "";
+    previewImage.classList.add("hidden");
+  }
+});
+
 async function uploadMichiPhoto() {
   const form = document.getElementById("uploadingForm");
   const formData = new FormData(form);

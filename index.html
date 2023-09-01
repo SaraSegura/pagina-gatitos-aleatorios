@@ -23,7 +23,7 @@
       <h1
         class="mt-10 mb-5 text-3xl lg:text-4xl md:text-4xl font-black text-pink-600"
       >
-        Michis App
+        Mundo Michis
       </h1>
 
       <span id="error"></span>
@@ -136,15 +136,42 @@
           class="mb-10 flex flex-wrap justify-evenly items-center"
         ></section>
       </section>
-      <section id="uploadingMichi">
-        <h2>Sube la foto de tu michi</h2>
+      <section
+        id="uploadingMichi"
+        class="mb-10 flex flex-col justify-center items-center"
+      >
+        <h2 class="mb-5 font-semibold text-2xl text-pink-500 text-center">
+          Sube la foto de tu michi
+        </h2>
 
-        <form id="uploadingForm">
-          <input type="file" name="file" id="file" />
+        <form
+          id="uploadingForm"
+          class="flex flex-col justify-center items-center"
+        >
+          <input type="file" name="file" id="file" class="hidden" />
+          <label
+            for="file"
+            class="bg-pink-500 text-white rounded-3xl px-3 py-2 cursor-pointer text-center w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+          >
+            <div
+              class="bg-pink-600 border-2 rounded-full transition-colors duration-300 transform-gpu active:scale-105"
+            >
+              <span class="text-sm md:text-base lg:text-lg"
+                >Seleccionar archivo</span
+              >
+            </div>
+
+            <img
+              id="previewImage"
+              src=""
+              alt="Miniatura de la foto"
+              class="mt-2 rounded-full mx-auto hidden"
+            />
+          </label>
           <button
             type="button"
             onclick="uploadMichiPhoto()"
-            class="border-2 rounded-full px-3 py-2 font-bold bg-pink-600 text-white hover:bg-fuchsia-400 hover:text-pink-600 transition-colors duration-300 transform-gpu active:scale-105 self-center"
+            class="border-2 rounded-full px-3 py-2 font-bold bg-pink-600 text-white hover:bg-fuchsia-400 hover:text-pink-600 transition-colors duration-300 transform-gpu active:scale-105 self-center mt-4"
           >
             Subir
           </button>
