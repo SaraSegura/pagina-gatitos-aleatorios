@@ -155,29 +155,24 @@ async function loadFavouriteMichis() {
 }
 
 async function saveFavouriteMichi(id) {
-  const { data, status } = await api.pos("/favourites", {
-    image_id: id,
-  });
+  try {
+    const response = await api.post("/favourites", {
+      image_id: id,
+    });
 
-  // const res = await fetch(API_URL_FAVORITES, {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     "X-API-KEY": API_KEY,
-  //   },
-  //   body: JSON.stringify({
-  //     image_id: id,
-  //   }),
-  // });
-  // const data = await res.json();
+    console.log("Save");
 
-  console.log("Save");
-
-  if (status !== 200) {
-    spanError.innerHTML = "Hubo un error: " + status + data.message;
-  } else {
-    console.log("Michi guardado en favoritos");
-    loadFavouriteMichis();
+    if (response.status !== 200) {
+      spanError.innerHTML =
+        "Hubo un error: " + response.status + response.data.message;
+    } else {
+      console.log("Michi guardado en favoritos");
+      loadFavouriteMichis();
+    }
+  } catch (error) {
+    console.error("Error al guardar el michi en favoritos", error);
+    spanError.innerHTML =
+      "Hubo un error al intentar guardar el michi en favoritos";
   }
 }
 
