@@ -1,2 +1,6 @@
-# pagina-gatitos-aleatorios
-Es una pagina de gatitos aleatorios.
+# [Mundo michi😻](https://sarasegura.github.io/pagina-gatitos-aleatorios/)
+
+## Tecnologías Utilizadas
+
+## Autor
+Sara Paola Segura Devia- Front-end Developer.
