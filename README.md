@@ -1,6 +1,8 @@
 # [Mundo michi😻](https://sarasegura.github.io/pagina-gatitos-aleatorios/)
 Bienvenido a la Página de Gatitos Aleatorios, donde puedes disfrutar de imágenes adorables de gatitos.
 
+[![gatito](https://comunidad.retorn.com/wp-content/uploads/cache/2018/09/gatitos/1583254719.jpg)](https://sarasegura.github.io/pagina-gatitos-aleatorios/)
+
 ## Tecnologías Utilizadas
 
 - **HTML:** Lenguaje de marcado estándar para la creación de páginas web.
