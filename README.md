@@ -1,5 +1,5 @@
 # [Mundo michi😻](https://sarasegura.github.io/pagina-gatitos-aleatorios/)
-Bienvenido a la Página de Gatitos Aleatorios, donde puedes disfrutar de imágenes adorables de gatitos.
+Bienvenid@ a la Página de Gatitos Aleatorios, donde puedes disfrutar de imágenes adorables de gatitos.
 
 [<img src="https://comunidad.retorn.com/wp-content/uploads/cache/2018/09/gatitos/1583254719.jpg" alt="gatito" width="300px">](https://sarasegura.github.io/pagina-gatitos-aleatorios/)
 
