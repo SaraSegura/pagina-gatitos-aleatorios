@@ -1,4 +1,4 @@
-# [Mundo michi😻](https://sarasegura.github.io/pagina-gatitos-aleatorios/)
+# [Mundo michis😻](https://sarasegura.github.io/pagina-gatitos-aleatorios/)
 Bienvenid@ a la Página de Gatitos Aleatorios, este proyecto utiliza JavaScript para consumir la API de The Cat API y mostrar imágenes adorables de gatitos.
 
 [<img src="https://comunidad.retorn.com/wp-content/uploads/cache/2018/09/gatitos/1583254719.jpg" alt="gatito" width="300px">](https://sarasegura.github.io/pagina-gatitos-aleatorios/)
