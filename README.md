@@ -12,7 +12,7 @@ Bienvenid@ a la Página de Gatitos Aleatorios, este proyecto utiliza JavaScript 
 ## Funcionalidades
 
 - **Gatitos Aleatorios:** Cada vez que le das  clic al botón recargar, se muestran nuevas imagen de un gatito adorable de forma aleatoria.
-- **Interactividad:** Puedes interactuar con la página de diferentes maneras,agregando gatitos favoritos o comprartiendo tus fotos de tus michis.
+- **Interactividad:** Puedes interactuar con la página de diferentes maneras, agregando gatitos favoritos o compartiendo fotos de tus michis.
 - **Consumo de la API de The Cat API:** Utiliza JavaScript para realizar peticiones a la API de The Cat API y obtener imágenes aleatorias de gatitos.
 
 ## Autor
